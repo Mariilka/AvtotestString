@@ -22,5 +22,25 @@ namespace Three.Tests
 
             Assert.AreEqual(expected, result, 0.001);
         }
+        public void CalculateLetterPercentageTest1()
+        {
+            Logic logic = new Logic();
+            string text = "0123";
+            double expected = 0; 
+
+            double result = logic.CalculateLetterPercentage(text);
+
+            Assert.AreEqual(expected, result, 0.001);
+        }
+        public void CalculateLetterPercentageTest2()
+        {
+            Logic logic = new Logic();
+            string text = "Даниил";
+            double expected = 100.0;
+
+            double result = logic.CalculateLetterPercentage(text);
+
+            Assert.AreEqual(expected, result, 0.001);
+        }
     }
 }
