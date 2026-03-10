@@ -11,8 +11,6 @@ namespace Three
     {
         static void Main()
         {
-            Logic textAnalyzer = new Logic();
-
 
             while (true)
             {
@@ -23,7 +21,7 @@ namespace Three
                     break;
 
                 // Используем метод из класса Logic
-                double letterPercentage = textAnalyzer.CalculateLetterPercentage(sentence);
+                double letterPercentage = Logic.CalculateLetterPercentage(sentence);
 
                 Console.WriteLine($"Предложение: \"{sentence}\"");
                 Console.WriteLine($"Доля букв: {letterPercentage:F2}%");
@@ -33,9 +31,9 @@ namespace Three
 
         }
     }
-    public class Logic
+    public  class Logic
     {
-        public double CalculateLetterPercentage(string text)
+        public static double CalculateLetterPercentage(string text)
         {
             if (string.IsNullOrEmpty(text)) // является ли строка пустой
                 return 0;
